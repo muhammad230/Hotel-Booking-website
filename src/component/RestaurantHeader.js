@@ -1,36 +1,33 @@
-import React from 'react'
+import React from "react";
 
-const  RestaurantHeader = () =>{
+const RestaurantHeader = () => {
   return (
     <div>
-       <div className="container">
-      <header>
-        <h1>Discover Restaurants</h1>
-        <p>Find your perfect dining experience</p>
+      <div className="container">
+        <header>
+          <h1>Discover Restaurants</h1>
+          <p>Find your perfect dining experience</p>
 
-        <div className="search-filters">
-          <div className="search-box">
-        
-            <input type="text" placeholder="Search Instrument, Guitres..." />
+          <div className="search-filters">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search Instrument, Guitars..." />
+            </div>
+
+            <div className="filter">
+              <span>Cuisine</span>
+            </div>
+            <div className="filter">
+              <span> <i class="fa-solid fa-location-dot"></i>Locations</span>
+            </div>
+            <div className="filters">
+              <span className="booking">View Booking</span>
+            </div>
           </div>
-          <div className="filter">
-            
-            <span>Cuisine</span>
-          </div>
-          <div className="filter">
-           
-            <span>Locations</span>
-          </div>
-          <div className="filters">
-           
-            <span className='booking'>View Booking</span>
-          </div>
-        </div>
-      </header>
+        </header>
+      </div>
     </div>
-  
-    </div>
-  )
+  );
 };
 
 export default RestaurantHeader;
