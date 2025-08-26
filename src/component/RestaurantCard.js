@@ -388,6 +388,22 @@ const RestaurantCard = () => {
                     reprehenderit, dolorum atque! Porro temporibus nostrum eum.
                   </p>
                 </div>
+                <div className="reviews-conter">
+                  <h3>Armen Sargsyan</h3>
+                  <p>lorem Ipsum</p>
+                  <div className="rating">
+                    <span className="star">★</span>
+                    <span className="star">★</span>
+                    <span className="star">★</span>
+                    <span className="star">★</span>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus fugiat doloremque mollitia ipsa aliquam neque
+                    quam eius eaque, harum nesciunt quisquam quo obcaecati
+                    reprehenderit, dolorum atque! Porro temporibus nostrum eum.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
