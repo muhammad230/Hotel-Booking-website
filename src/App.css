@@ -220,12 +220,15 @@
 }
 
 .restaurants-wrapper {
-  display: flex;
+  display: grid;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   font-size: 10px;
-  margin-bottom: 40px;   
+  margin-bottom: 40px;  
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 20px;
+  padding: 20px; 
 }
 
 .restaurant-detail {
@@ -388,6 +391,42 @@
 .btn-secondary:hover {
   background-color: #f8f9fa;
 }
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.reservation-form input,
+.reservation-form select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.reserve-btn {
+  background: #a020f0;  
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reserve-btn:hover {
+  background: #7a1bc2;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
