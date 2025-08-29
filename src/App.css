@@ -427,6 +427,23 @@
   background: #7a1bc2;
 }
 
+img{
+  height: 20vmin;
+  width: 20vmin;
+  margin-left: 45vmin;
+}
+.h2-com{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  
+}
+.para{
+  display: flex;
+  justify-content: center;
+  color: #8e8d8f;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
