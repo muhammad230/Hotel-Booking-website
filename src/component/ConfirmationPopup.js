@@ -4,16 +4,48 @@ const ConfirmationPopup = ({ data, onClose }) => {
   return (
     <div className="popup-overlay">
       <div className="popup-content">
-        <img src="/images/image6.webp" alt="" />
+        <img className="img" src="/images/image6.webp" alt="" />
         <h2 className="h2-com">You're all set!</h2>
-       <p className="para" >Your reservation at      <strong>{data.restaurant}</strong> is confirmed.</p>
-        <p>
-          Date: {data.date} | Time: {data.time} | Guests: {data.guests}
+        <p className="para">
+          Your reservation at <strong>{data.restaurant}</strong> is confirmed.
         </p>
-        {data.occasion && <p>Occasion: {data.occasion}</p>}
-        {data.seating && <p>Seating: {data.seating}</p>}
-        {data.dietary && <p>Dietary Preference: {data.dietary}</p>}
-        {data.requests && <p>Special Requests: {data.requests}</p>}
+
+        {/* Reservation Details Grid */}
+        <div className="details-grid">
+          <div className="detail-card">
+            <span className="icon">📅</span>
+            <div>
+              <p className="label">Date</p>
+              <p className="value">{data.date}</p>
+            </div>
+          </div>
+
+          <div className="detail-card">
+            <span className="icon">⏰</span>
+            <div>
+              <p className="label">Time</p>
+              <p className="value">{data.time}</p>
+            </div>
+          </div>
+
+          <div className="detail-card">
+            <span className="icon">👥</span>
+            <div>
+              <p className="label">Party Size</p>
+              <p className="value">{data.guests} Guests</p>
+            </div>
+          </div>
+
+          <div className="detail-card">
+            <span className="icon">✉️</span>
+            <div>
+              <p className="label">Confirmation sent to</p>
+              <p className="value">{data.email}</p>
+            </div>
+          </div>
+        </div>
+
+      
 
         <button className="btn-primary" onClick={onClose}>
           Close
