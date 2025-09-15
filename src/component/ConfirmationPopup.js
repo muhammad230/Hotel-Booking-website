@@ -9,8 +9,6 @@ const ConfirmationPopup = ({ data, onClose }) => {
         <p className="para">
           Your reservation at <strong>{data.restaurant}</strong> is confirmed.
         </p>
-
-        {/* Reservation Details Grid */}
         <div className="details-grid">
           <div className="detail-card">
             <span className="icon">📅</span>

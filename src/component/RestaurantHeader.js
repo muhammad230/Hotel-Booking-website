@@ -1,31 +1,36 @@
 import React from "react";
+import { MdAccountCircle } from "react-icons/md"; 
 
 const RestaurantHeader = () => {
   return (
-    <div>
-      <div className="container">
-        <header>
-          <h1>Discover Restaurants</h1>
-          <p>Find your perfect dining experience</p>
+    <div className="container">
+      <header className="header">
+        <div className="profile-icon">
+          <MdAccountCircle size={36} />
+        </div>
 
-          <div className="search-filters">
-            <div class="search-box">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search Instrument, Guitars..." />
-            </div>
+        <h1>Discover Restaurants</h1>
+        <p>Find your perfect dining experience</p>
 
-            <div className="filter">
-              <span>Cuisine</span>
-            </div>
-            <div className="filter">
-              <span> <i class="fa-solid fa-location-dot"></i>Locations</span>
-            </div>
-            <div className="filters">
-              <span className="booking">View Booking</span>
-            </div>
+        <div className="search-filters">
+          <div className="search-box">
+            <i className="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Instrument, Guitars..." />
           </div>
-        </header>
-      </div>
+
+          <div className="filter">
+            <span>Cuisine</span>
+          </div>
+          <div className="filter">
+            <span>
+              <i className="fa-solid fa-location-dot"></i> Locations
+            </span>
+          </div>
+          <div className="filters">
+            <span className="booking">View Booking</span>
+          </div>
+        </div>
+      </header>
     </div>
   );
 };

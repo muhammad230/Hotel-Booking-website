@@ -14,7 +14,7 @@ const ReserveTable = ({ restaurantName, onClose, onSuccess }) => {
     requests: "",
   });
 
-  // handle form submission
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     const reservationData = {
@@ -22,14 +22,14 @@ const ReserveTable = ({ restaurantName, onClose, onSuccess }) => {
       ...formData,
     };
 
-    // send data to App.js
+ 
     onSuccess(reservationData);
 
-    // close popup
+ 
     onClose();
   };
 
-  // helper to update form data
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -71,7 +71,6 @@ const ReserveTable = ({ restaurantName, onClose, onSuccess }) => {
             />
           </div>
 
-          {/* Reservation Details */}
           <h3>Reservation Details</h3>
           <div className="form-section">
             <input
@@ -113,7 +112,6 @@ const ReserveTable = ({ restaurantName, onClose, onSuccess }) => {
             </select>
           </div>
 
-          {/* Additional Information */}
           <h3>Additional Information</h3>
           <div className="form-section">
             <select
@@ -147,8 +145,6 @@ const ReserveTable = ({ restaurantName, onClose, onSuccess }) => {
               onChange={handleChange}
             />
           </div>
-
-          {/* Submit Button */}
           <button type="submit" className="reserve-btn">
             Confirm Reservation
           </button>
