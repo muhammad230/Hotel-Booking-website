@@ -322,8 +322,6 @@ const RestaurantCard = ({ onSuccess }) => {
             <p>
               {popupData.cuisine} · {popupData.rating} ★ ({popupData.reviews})
             </p>
-            <button className="btn-primary2">Make Reservation</button>
-
             <div className="restaurant-info-cards">
               <div className="contact">
                 {" "}

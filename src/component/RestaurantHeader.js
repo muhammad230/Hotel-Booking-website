@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdAccountCircle } from "react-icons/md"; 
 
 const RestaurantHeader = () => {
+   const [popupData, setPopupData] = useState(null);
   return (
     <div className="container">
       <header className="header">
-        <div className="profile-icon">
+        <div className="profile-icon"  onClick={() =>
+                  setPopupData({
+                    
+                
+                  })
+                }>
           <MdAccountCircle size={36} />
         </div>
 
