@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { restaurants } from "./RestaurantData";
 import ReserveTable from "./RestaurantTable";
 
-const RestaurantCard = () => {
+const RestaurantCard = ({ onSuccess }) => {
   const [popupData, setPopupData] = useState(null);
   const [showReservation, setShowReservation] = useState(false);
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
@@ -281,8 +281,8 @@ const RestaurantCard = () => {
                 className="btn-secondary"
                 onClick={() =>
                   setPopupData({
-                    name: "Spice Villa",
-                    cuisine: "Indian · Uptown",
+                    name: "Green Garden",
+                    cuisine: "Salad · Mircle Graden",
                     rating: "4.6",
                     reviews: 298,
                     contact: "XXX XX XX XXX",
@@ -322,8 +322,6 @@ const RestaurantCard = () => {
             <p>
               {popupData.cuisine} · {popupData.rating} ★ ({popupData.reviews})
             </p>
-            <button className="btn-primary2">Make Reservation</button>
-
             <div className="restaurant-info-cards">
               <div className="contact">
                 {" "}
@@ -413,7 +411,9 @@ const RestaurantCard = () => {
         <ReserveTable
           restaurantName={selectedRestaurant}
           onClose={() => setShowReservation(false)}
+          onSuccess={onSuccess}
         />
+                
       )}
     </>
   );

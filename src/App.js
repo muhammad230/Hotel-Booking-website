@@ -1,13 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import RestaurantHeader from './component/RestaurantHeader';
-import RestaurantCard from './component/RestaurantCard';
+import { useState } from "react"; 
+import "./App.css";
+import RestaurantHeader from "./component/RestaurantHeader";
+import RestaurantCard from "./component/RestaurantCard";
+import ConfirmationPopup from "./component/ConfirmationPopup";
+
 
 function App() {
+  const [reservationSuccess, setReservationSuccess] = useState(null);
+
   return (
-     <div>
+    <div>
       <RestaurantHeader />
-      <RestaurantCard/>
+      <RestaurantCard onSuccess={(data) => setReservationSuccess(data)} />
+
+      {reservationSuccess && (
+        <ConfirmationPopup
+          data={reservationSuccess}
+          onClose={() => setReservationSuccess(null)}
+        />
+      )}
+      {/* <Reservations/> */}
     </div>
   );
 }

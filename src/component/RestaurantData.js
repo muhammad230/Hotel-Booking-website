@@ -2,7 +2,7 @@ export const restaurants = [
   {
     id: 1,
     name: "The Coastal Grill",
-    cuisine: "Mediterranean · Downtown",
+    cuisine: "Mediterranean · Downtowns",
     rating: 4.7,
     description: "Fresh seafood with cozy ambiance, perfect for family dinners or romantic nights.",
     menu: ["Grilled Salmon", "Lobster Bisque", "Caesar Salad"],
